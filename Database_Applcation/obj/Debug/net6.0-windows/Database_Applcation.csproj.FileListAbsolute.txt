@@ -48,3 +48,8 @@ C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\ne
 C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.pdb
 C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\ref\Database_Applcation.dll
+C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.Form3.resources
+C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.EmployeeForm.resources
+C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.Lunch.resources
+C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.SetLunch.resources

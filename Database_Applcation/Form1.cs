@@ -61,6 +61,9 @@ namespace Database_Applcation
                         {
                             MessageBox.Show("Login successful");
                             // Open dashboard form here
+
+                            Form3 frm3 = new Form3();
+                            frm3.Show();
                         }
                         else
                         {
