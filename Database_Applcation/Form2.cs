@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LunchManagementSystem.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,23 +34,49 @@ namespace Database_Applcation
             string conPass = confirmPassTextBox.Text;
             if (pass == conPass)
             {
-                string connstring = "Data Source = LAPTOP-LP7JVVRA\\SQL22; Initial Catalog = DMS; User ID=sa; Password=#$W@$/K753#*D@/@!B@$E#";
-                SqlConnection con = new SqlConnection(connstring);
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                con.Open();
-                string query = "insert into Users(FULLNAME, USERNAME, PASSWORD) values('" + fullName + "', '" + userName + "', '" + pass + "')";
-                SqlCommand cmd = new SqlCommand(query, con);
-                adapter.InsertCommand = new SqlCommand(query, con);
-                adapter.InsertCommand.ExecuteNonQuery();
-                cmd.Dispose();
-                con.Close();
-                MessageBox.Show("The user has registered sccessfully");
+                string connstring =
+                @"Data Source=LAPTOP-MUQ2LAHR\SQL22;
+          Initial Catalog=LunchManagementSystem;
+          User ID=sa;
+          Password=123";
+
+                Guid salt = Guid.NewGuid();
+                byte[] hash = PasswordHelper.HashPassword(pass, salt);
+
+                string query = @"INSERT INTO Users
+                     (FullName, UserName, PasswordHash, PasswordSalt)
+                     VALUES
+                     (@FullName, @UserName, @PasswordHash, @PasswordSalt)";
+
+                using (SqlConnection con = new SqlConnection(connstring))
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@FullName", fullName);
+                    cmd.Parameters.AddWithValue("@UserName", userName);
+                    cmd.Parameters.AddWithValue("@PasswordHash", hash);
+                    cmd.Parameters.AddWithValue("@PasswordSalt", salt);
+
+                    try
+                    {
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("User registered successfully");
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
             }
             else
             {
                 passValidation.Text = "Please check your password and try again";
 
             }
+
+
+
+
         }
 
         private void userNameTextBox_TextChanged(object sender, EventArgs e)

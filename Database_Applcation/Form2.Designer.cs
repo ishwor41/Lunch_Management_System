@@ -98,6 +98,7 @@
             passTextBox.Name = "passTextBox";
             passTextBox.Size = new Size(125, 27);
             passTextBox.TabIndex = 6;
+            passTextBox.UseSystemPasswordChar = true;
             passTextBox.TextChanged += passTextBox_TextChanged;
             // 
             // confirmPassTextBox
@@ -106,6 +107,7 @@
             confirmPassTextBox.Name = "confirmPassTextBox";
             confirmPassTextBox.Size = new Size(125, 27);
             confirmPassTextBox.TabIndex = 7;
+            confirmPassTextBox.UseSystemPasswordChar = true;
             confirmPassTextBox.TextChanged += confirmPassTextBox_TextChanged;
             // 
             // registerButton
