@@ -61,6 +61,8 @@ namespace Database_Applcation
                         con.Open();
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("User registered successfully");
+                        Form1 frm1 = new Form1();
+                        frm1.Show();
                     }
                     catch (SqlException ex)
                     {

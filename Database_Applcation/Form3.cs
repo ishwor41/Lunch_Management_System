@@ -31,6 +31,7 @@ namespace Database_Applcation
         {
             EmployeeForm frm2 = new EmployeeForm();
             frm2.Show();
+            this.Hide();
         }
     }
 }

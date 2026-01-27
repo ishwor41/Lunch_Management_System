@@ -37,7 +37,7 @@ namespace Database_Applcation
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Employees", conn);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT Name,Age,Position,Department FROM Employees", conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;

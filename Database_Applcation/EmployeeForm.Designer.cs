@@ -39,7 +39,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(724, 208);
+            dataGridView1.Size = new Size(805, 208);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -51,6 +51,7 @@
             Controls.Add(dataGridView1);
             Name = "EmployeeForm";
             Text = "EmployeeForm";
+            Load += EmployeeForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
