@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
+            updateBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(113, 140);
             dataGridView1.Name = "dataGridView1";
@@ -41,13 +43,23 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(805, 208);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // updateBtn
+            // 
+            updateBtn.Location = new Point(758, 377);
+            updateBtn.Name = "updateBtn";
+            updateBtn.Size = new Size(131, 29);
+            updateBtn.TabIndex = 1;
+            updateBtn.Text = "Update";
+            updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.Click += updateBtn_Click;
             // 
             // EmployeeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(995, 486);
+            Controls.Add(updateBtn);
             Controls.Add(dataGridView1);
             Name = "EmployeeForm";
             Text = "EmployeeForm";
@@ -59,5 +71,6 @@
         #endregion
 
         private DataGridView dataGridView1;
+        private Button updateBtn;
     }
 }
