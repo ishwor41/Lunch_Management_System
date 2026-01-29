@@ -52,6 +52,12 @@ namespace Database_Applcation
             da.Update(dt);
             MessageBox.Show("Data updated successfully");
         }
+
+        private void add_Btn_Click(object sender, EventArgs e)
+        {
+            CreateEmployeeForm frm = new CreateEmployeeForm();
+            frm.Show();
+        }
     }
 
 }

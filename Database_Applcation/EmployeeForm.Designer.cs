@@ -30,6 +30,7 @@
         {
             dataGridView1 = new DataGridView();
             updateBtn = new Button();
+            add_Btn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -54,11 +55,22 @@
             updateBtn.UseVisualStyleBackColor = true;
             updateBtn.Click += updateBtn_Click;
             // 
+            // add_Btn
+            // 
+            add_Btn.Location = new Point(774, 89);
+            add_Btn.Name = "add_Btn";
+            add_Btn.Size = new Size(99, 29);
+            add_Btn.TabIndex = 2;
+            add_Btn.Text = "Add";
+            add_Btn.UseVisualStyleBackColor = true;
+            add_Btn.Click += add_Btn_Click;
+            // 
             // EmployeeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(995, 486);
+            Controls.Add(add_Btn);
             Controls.Add(updateBtn);
             Controls.Add(dataGridView1);
             Name = "EmployeeForm";
@@ -72,5 +84,6 @@
 
         private DataGridView dataGridView1;
         private Button updateBtn;
+        private Button add_Btn;
     }
 }

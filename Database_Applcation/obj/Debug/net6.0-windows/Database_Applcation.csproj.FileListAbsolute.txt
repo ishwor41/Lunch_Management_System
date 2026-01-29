@@ -53,3 +53,4 @@ C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\ne
 C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.EmployeeForm.resources
 C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.Lunch.resources
 C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.SetLunch.resources
+C:\Users\LENOVO\Desktop\Lunch_Management_System\Database_Applcation\obj\Debug\net6.0-windows\Database_Applcation.CreateEmployeeForm.resources
